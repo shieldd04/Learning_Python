@@ -10,7 +10,7 @@ elif num % 2 == 0:
 else:
     print("{} is an odd number. ".format(num))
 
-if check % num == 0:
+if num % check == 0:
     print("{} divides evenly by {}.".format(num, check))
 else:
     print("{} does not divide evenly by {}. ".format(num, check))
