@@ -1,0 +1,16 @@
+#PythonPractice.org: Odd or Even.
+
+num = int(input("Please enter a number: "))
+check = int(input("Which number shall i divide it by?: "))
+
+if num % 4 == 0:
+    print("{} is a multiple of 4. ".format(num))
+elif num % 2 == 0:
+    print("{} is an even number. ".format(num))
+else:
+    print("{} is an odd number. ".format(num))
+
+if check % num == 0:
+    print("{} divides evenly by {}.".format(num, check))
+else:
+    print("{} does not divide evenly by {}. ".format(num, check))
