@@ -1,0 +1,32 @@
+https://www.practicepython.org/exercise/2014/03/26/08-rock-paper-scissors.html
+
+r = "rock"
+p = "paper"
+s = "scissors"
+
+print("Welcome to Rock, Paper, Scissors!")
+
+player1 = str(input("Player 1, GO! Rock, Paper or Scissors?: "))
+player2 = str(inout("Player 2, GO! Rock, Paper or Scissors?: "))
+
+while True:
+    if player1 == r and player2 == p:
+        print("Player 2 wins!")
+        break
+    elif player1 == p and player2 == s:
+        print("Player 2 wins!")
+        break
+    elif player1 == s and player2 == r:
+        print("Player 2 wins!")
+        break
+    elif player2 == r and player1 == p:
+        print("Player 1 wins!")
+        break
+    elif player2 == p and player1 == s:
+        print("Player 1 wins!")
+        break
+    elif player2 == s and player1 == r:
+        print("Player 1 wins!")
+        break
+    else:
+        print("Draw!")
