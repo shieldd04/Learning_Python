@@ -1,0 +1,21 @@
+answer = str(input("This programme tests for palindromes. Please enter a word: "))
+
+l = len(answer)
+first = 0
+last = -1
+pal = []
+
+
+for c in answer:
+    if answer[first] == answer[last]:
+        pal.append("y")
+        first = first + 1
+        last = last - 1
+    else:
+        break
+
+if (len(pal)) == l:
+    print("{} is a Palindrone!".format(answer))
+else:
+    print("{} is not a Palindrome!".format(answer))
+    
