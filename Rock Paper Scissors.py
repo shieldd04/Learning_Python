@@ -8,8 +8,6 @@ username2 = str(input('Player Two, enter your name: '))
 player1 = str(input("{}, GO! Rock, Paper or Scissors?: ".format(username1)))
 player2 = str(input("{}, GO! Rock, Paper or Scissors?: ".format(username2)))
 
-# More creative solution by defining a function
-
 def compare(p1, p2):
     if p1 == p2:
         return ("It's a Draw!")

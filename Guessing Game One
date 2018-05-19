@@ -1,0 +1,23 @@
+import random
+num = random.randint(1, 9)
+print(num)
+guess = 0
+
+while True:
+    player = input('Guess a number to start the game(you can type "stop" at any time to quit): ')
+    guess = guess + 1
+    def game(p1):
+        if player == 'stop':
+            print('Goodbye...')
+            quit()
+        elif int(player) == num:
+            print('You guessed correctly with {} guess!'.format(guess))
+            exit()
+        elif int(player) < num:
+            print("You guessed too low!, you've guessed {} times. Guess again: ".format(guess))
+        elif int(player) > num:
+            print("You guessed too high!, you've guessed {} times.".format(guess))
+        else:
+            print("Invalid data type. Please make sure you've used a number")
+
+    game(player)
