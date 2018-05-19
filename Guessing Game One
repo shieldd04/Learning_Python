@@ -1,6 +1,5 @@
 import random
 num = random.randint(1, 9)
-print(num)
 guess = 0
 
 while True:
