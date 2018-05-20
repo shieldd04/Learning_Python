@@ -1,0 +1,23 @@
+#https://www.practicepython.org/exercise/2014/05/15/14-list-remove-duplicates.html
+
+import random
+rand_list = [1, 1, 4, 5, 5, 5,
+             6, 7, 7, 8, 9, 10]
+
+def dedup(x):
+    new_list = []
+    for i in x:
+        if i not in new_list:
+            new_list.append(i)
+    return(new_list)
+
+dedup(rand_list)
+
+# sets
+
+def dedup_v2(y):
+    return(set(y))
+
+print(rand_list)
+print(dedup(rand_list))
+print(dedup_v2(rand_list))
