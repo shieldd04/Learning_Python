@@ -1,0 +1,11 @@
+#https://www.practicepython.org/exercise/2014/04/25/12-list-ends.html
+
+list1 = [5, 10, 15, 20, 25]
+
+def clipper(a):
+    list2 = []
+    list2.append(a[0])
+    list2.append(a[-1])
+    print(list2)
+
+clipper(list1)
