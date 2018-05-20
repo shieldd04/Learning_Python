@@ -1,0 +1,11 @@
+#https://www.practicepython.org/exercise/2014/11/11/20-element-search.html
+
+list1 = [1,2,3,5,7,12,15,18,19,25,33,44]
+num = 15
+
+def search(x):
+        if x in list1:
+            return True
+        if x not in list1:
+            return False
+print(search(num))
