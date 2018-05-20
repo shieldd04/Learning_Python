@@ -1,0 +1,19 @@
+#https://www.practicepython.org/exercise/2014/04/30/13-fibonacci.html
+
+def fibonacci():
+    num = int(input("How many fibonacci numbers do you wish to generate? "))
+    a = 1
+    if num == 0:
+        list1 = []
+    elif num == 1:
+        list1 = [1]
+    elif num == 2:
+        list1 = [1, 1]
+    elif num > 2:
+        list1 = [1, 1]
+        while len(list1) != num:
+            list1.append(list1[a] + list1[a - 1])
+            a += 1
+    print(list1)
+
+fibonacci()
