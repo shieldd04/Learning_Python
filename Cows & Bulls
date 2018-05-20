@@ -1,0 +1,42 @@
+#https://www.practicepython.org/exercise/2014/07/05/18-cows-and-bulls.html
+
+import random
+
+def compare(gen_num, guess):
+    cowbull = [0, 0]
+    for i in range(len(gen_num)):
+        if gen_num[i] == guess[i]:
+            cowbull[0] += 1
+        elif gen_num[i] in guess:
+            cowbull[1] += 1
+        else:
+            continue
+    return cowbull
+
+if __name__=="__main__":
+    gameon = True
+    gen_num = (str(random.randint(1000, 9999)))
+    guesses = 0
+
+    print("Let's play Cows & Bulls!")
+    print("Rules:")
+    print("For every number in the wrong place, you get a bull. For every one in the right place, you get a cow.")
+    print("The game ends when you get 4 cows!")
+    print("Type exit to end the game")
+
+
+    while gameon:
+        guess = (input("Guess a 4 digit number!: "))
+        print(gen_num)
+        if guess == "exit".upper():
+            break
+        cowbullvol = compare(gen_num, guess)
+        guesses += 1
+        print("{} Cows, {} Bulls.".format(cowbullvol[0], cowbullvol[1]))
+
+        if cowbullvol[0] == 4:
+            gameon == False
+            print("Well done, you've won the game, it took you {} guesses, the number was {}!".format(guesses, gen_num))
+            break
+        else:
+            print("And our survey says...? BAH BAH. Please guess again!")
