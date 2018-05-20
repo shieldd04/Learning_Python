@@ -1,0 +1,21 @@
+#https://www.practicepython.org/exercise/2014/04/16/11-check-primality-functions.html
+
+def num():
+    return int(input("Enter a number: "))
+
+usernum = num()
+
+def prime():
+    if usernum > 0:
+        for i in range(2, usernum -1):
+            if usernum % i != 0:
+                continue
+            elif usernum % i == 0:
+                return("{} is not prime..".format(usernum))
+        return("{} is a prime number..".format(usernum))
+    elif usernum == 0:
+        return("{} is not a prime number..".format(usernum))
+    else:
+        return("{} is not a prime number..".format(usernum))
+
+print(prime())
