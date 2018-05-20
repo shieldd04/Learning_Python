@@ -1,0 +1,9 @@
+#https://www.practicepython.org/exercise/2014/05/21/15-reverse-word-order.html
+
+word = str(input("Please enter a word: "))
+
+def reverse(x):
+    for c in x:
+        return ' '.join(x.split()[::-1])
+
+print(reverse(word))
