@@ -1,0 +1,37 @@
+#https://www.practicepython.org/exercise/2015/11/01/25-guessing-game-two.html
+
+import random
+
+print('''
+I am the Sky net number guessing protocol.
+Please picture a number between 0 & 100 in your mind and I will
+attempt to guess the correct number.
+Tell me if it's higher, lower or correct.
+I will learn and adjust accordingly''')
+
+compGuess = 50
+playing = True
+u = [100]
+l = [1]
+log = []
+guessCount = 0
+while playing == True:
+    print(" Is it: {}?".format(int(compGuess)))
+    log.append(compGuess)
+    userInput = input("Higher, Lower or Correct?").lower()
+    if userInput == "correct":
+        guessCount += 1
+        print("Sky net wins in {} guesses ;-) ".format(guessCount))
+        playing = False
+    elif userInput == "higher":
+        guessCount += 1
+        l.append(compGuess)
+        print(u)
+        compGuess = ((u[-1] - compGuess) / 2) + compGuess
+    elif userInput == "lower":
+        guessCount += 1
+        u.append(compGuess)
+        print(l)
+        compGuess = compGuess - ((u[-1] - l[-1]) / 2)
+    else:
+        print("Please answer: Higher, Lower or Correct. ")
