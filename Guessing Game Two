@@ -17,7 +17,7 @@ log = []
 guessCount = 0
 while playing == True:
     print(" Is it: {}?".format(int(compGuess)))
-    log.append(compGuess)
+    log.append(compGuess)#incase i want to list all the guesses later
     userInput = input("Higher, Lower or Correct?").lower()
     if userInput == "correct":
         guessCount += 1
