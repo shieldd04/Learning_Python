@@ -1,2 +1,2 @@
 # Learning_Python
-Content generated from learning python, completing examples and projects.
+Python practice exercises, mainly from: https://www.practicepython.org/
