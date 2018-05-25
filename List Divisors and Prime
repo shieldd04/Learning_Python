@@ -1,0 +1,17 @@
+def divisors(num):
+    nums = list(range(2, num))
+    div = []
+
+    for i in nums:
+        if num % i == 0:
+            div.append(i)
+        elif num % i != 0:
+            continue
+    if len(div) > 0:
+        return(div)
+    else:
+        return("{} is prime ".format(num))
+
+print(divisors(12))
+print(divisors(25))
+print(divisors(13))
